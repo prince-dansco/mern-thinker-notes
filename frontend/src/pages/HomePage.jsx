@@ -22,7 +22,8 @@ axios.defaults.withCredentials = true;
   useEffect(() => {
     const fetchNote = async () => {
       try {
-        const res = await axios.get("http://localhost:5001/api/notes");
+        const res = await axios.get(API_URL);
+        //fixing this url
         console.log("Full response:", res.data);
         const notesData = res.data.data || res.data.notes || res.data;
 
